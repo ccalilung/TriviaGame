@@ -1,6 +1,6 @@
    
 
-
+//start all functions after "start game" selected
     function go() {
         window.correct = 0;
         window.incorrect = 0;
@@ -190,7 +190,7 @@
     }]
 
 
-
+//timer function. start at 11, subtract 1 so 10 seconds appears. if greater than 1, print X seconds. if 1, print 1 second. if 0, run incorrectAnswer function
     timer = function () {
         timeStart--;
         if (timeStart > 1) {
@@ -203,6 +203,7 @@
         }
     }
 
+//end of game. remove all the buttons and the question. print the giphys for winner if correct>incorrect, or giphy for loser if incorrect>correct.
     stop = function () {
         clearInterval(timerSet);
         $("#question").remove();
@@ -224,6 +225,7 @@
 
     }
 
+//for each button, check what the correct answer is, and compare it to the value of the button. if they match, it's a correct answer and run correctAnswer function. else, run incorrectAnswer
     function selectButton() {
         a.on("click", function () {
             if (a.val() === questions[f].answer) {
@@ -266,6 +268,7 @@
         })
     }
 
+// selects the question at random, appends the buttons and places the answer choices from the questions object into the text of the buttons. then start the timer
     function randomizer() {
         window.f = [Math.floor(Math.random() * questions.length)]
         $("#question").html(questions[f].question)
@@ -289,6 +292,7 @@
     }
     randomizer();
 
+// shortcuts for calling the buttons, timer, statistics, etc divs
     function defineVariables() {
         window.a = $("#A")
         window.b = $("#B")
@@ -304,7 +308,7 @@
 
     }
 
-
+// if answer is correct, stop the timer, increase the variable correct by 1, reprint it, take the question asked out of the questions object, and if there are no more questions, run stop function to end game. otherwise, clear the buttons out, and run the randomizer function again to get next question and choices
     function correctAnswer() {
         clearInterval(timerSet);
         correct++;
@@ -319,6 +323,7 @@
 
     }
 
+// same idea as correct, but for incorrect answer selection
     function incorrectAnswer() {
         clearInterval(timerSet);
         incorrect++;
@@ -333,6 +338,7 @@
         }
     }}
 
+// initiate go function when "start game" is selected
 $("#go").on("click",function () {
     a = $("#go")
     a.remove();
