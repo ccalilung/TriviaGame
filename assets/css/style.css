@@ -1,0 +1,39 @@
+button {
+    margin: 5px;
+    
+}
+
+.row {
+    text-align: center;
+}
+
+.stats {
+    text-align: right;
+}
+
+#question {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+#announcements {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+#timer {
+    font-size: 18px;
+    text-align: left;
+}
+
+#status {
+    font-size: 30px;
+    text-align: center;
+}
+
+.container {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    opacity: 0.9;
+}
