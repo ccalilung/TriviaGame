@@ -37,3 +37,8 @@ button {
     padding-bottom: 10px;
     opacity: 0.9;
 }
+
+body {
+    background-image: url(../images/goldengate.jpg);
+    width: 100%;
+}
