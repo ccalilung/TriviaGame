@@ -39,6 +39,6 @@ button {
 }
 
 body {
-    background-image: url(../images/goldengate.jpg);
+    background-image: url("../images/goldengate.jpg");
     width: 100%;
 }
