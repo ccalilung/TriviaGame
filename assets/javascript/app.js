@@ -245,51 +245,41 @@
        //for each button, check what the correct answer is, and compare it to the value of the button. if they match, it's a correct answer and run correctAnswer function. else, run incorrectAnswer
        function selectButton() {
            a.on("click", function () {
-               if (a.val() === questions[f].answer && click === 0) {
-                   click++
+               if (a.val() === questions[f].answer) {
                    showAnswerCorrect();
                } else {
-                   click++
                    showAnswerIncorrect()
                }
            })
 
            b.on("click", function () {
-               if (b.val() === questions[f].answer && click === 0) {
-                   click++
+               if (b.val() === questions[f].answer) {
                    showAnswerCorrect();
                } else {
-                   click++
                    showAnswerIncorrect()
                }
            })
 
            c.on("click", function () {
-               if (c.val() === questions[f].answer && click === 0) {
-                   click++
+               if (c.val() === questions[f].answer) {
                    showAnswerCorrect();
                } else {
-                   click++
                    showAnswerIncorrect()
                }
            })
 
            d.on("click", function () {
-               if (d.val() === questions[f].answer && click === 0) {
-                   click++
+               if (d.val() === questions[f].answer) {
                    showAnswerCorrect();
                } else {
-                   click++
                    showAnswerIncorrect()
                }
            })
 
            e.on("click", function () {
-               if (e.val() === questions[f].answer && click === 0) {
-                   click++
+               if (e.val() === questions[f].answer) {
                    showAnswerCorrect();
                } else {
-                   click++
                    showAnswerIncorrect()
                }
            })
@@ -389,7 +379,6 @@
            window.j = $("#announcements")
            window.k = $("#question")
            window.timeStart = 11;
-           window.click = 0;
 
        }
 
